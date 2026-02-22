@@ -8,7 +8,7 @@ namespace TestCheck.Tests
 
         public ApiFixture()
         {
-            Client = new RestClient("https://jsonplaceholder.typicode.com");
+            Client = new RestClient("https://api.restful-api.dev");
         }
     }
 }

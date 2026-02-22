@@ -98,3 +98,11 @@ C:\Users\Ridmi\RestAPIProject\TestCheck\obj\Debug\net8.0\TestCheck.pdb
 C:\Users\Ridmi\RestAPIProject\TestCheck\obj\Debug\net8.0\TestCheck.genruntimeconfig.cache
 C:\Users\Ridmi\RestAPIProject\TestCheck\obj\Debug\net8.0\ref\TestCheck.dll
 C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\RestSharp.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\obj\Debug\net8.0\TestCheck.sourcelink.json
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Extension.JUnit.Xml.TestLogger.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\Spekt.TestLogger.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\Allure.Net.Commons.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\Allure.Xunit.reporters.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\AspectInjector.Broker.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\0Harmony.dll
+C:\Users\Ridmi\RestAPIProject\TestCheck\bin\Debug\net8.0\MimeTypesMap.dll

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "TestCheck/1.0.0": {
         "dependencies": {
+          "Allure.Xunit": "2.14.1",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "Newtonsoft.Json": "13.0.4",
           "RestSharp": "113.1.0",
@@ -15,6 +16,50 @@
         },
         "runtime": {
           "TestCheck.dll": {}
+        }
+      },
+      "Allure.Net.Commons/2.14.1": {
+        "dependencies": {
+          "AspectInjector": "2.8.1",
+          "MimeTypesMap": "1.0.9",
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Allure.Net.Commons.dll": {
+            "assemblyVersion": "2.14.1.0",
+            "fileVersion": "2.14.1.0"
+          }
+        }
+      },
+      "Allure.Xunit/2.14.1": {
+        "dependencies": {
+          "Allure.Net.Commons": "2.14.1",
+          "Lib.Harmony": "2.4.1",
+          "xunit.assert": "2.6.6",
+          "xunit.core": "2.6.6",
+          "xunit.runner.utility": "2.6.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Allure.Xunit.reporters.dll": {
+            "assemblyVersion": "2.14.1.0",
+            "fileVersion": "2.14.1.0"
+          }
+        }
+      },
+      "AspectInjector/2.8.1": {
+        "runtime": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "assemblyVersion": "2.8.1.0",
+            "fileVersion": "2.8.1.0"
+          }
+        }
+      },
+      "Lib.Harmony/2.4.1": {
+        "runtime": {
+          "lib/net8.0/0Harmony.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          }
         }
       },
       "Microsoft.CodeCoverage/17.8.0": {
@@ -277,6 +322,14 @@
           }
         }
       },
+      "MimeTypesMap/1.0.9": {
+        "runtime": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {
+            "assemblyVersion": "1.0.9.0",
+            "fileVersion": "1.0.9.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.4": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -303,8 +356,8 @@
       },
       "xunit/2.5.3": {
         "dependencies": {
-          "xunit.assert": "2.5.3",
-          "xunit.core": "2.5.3"
+          "xunit.assert": "2.6.6",
+          "xunit.core": "2.6.6"
         }
       },
       "xunit.abstractions/2.0.3": {
@@ -315,39 +368,50 @@
           }
         }
       },
-      "xunit.assert/2.5.3": {
+      "xunit.assert/2.6.6": {
         "runtime": {
-          "lib/netstandard1.1/xunit.assert.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+          "lib/net6.0/xunit.assert.dll": {
+            "assemblyVersion": "2.6.6.0",
+            "fileVersion": "2.6.6.0"
           }
         }
       },
-      "xunit.core/2.5.3": {
+      "xunit.core/2.6.6": {
         "dependencies": {
-          "xunit.extensibility.core": "2.5.3",
-          "xunit.extensibility.execution": "2.5.3"
+          "xunit.extensibility.core": "2.6.6",
+          "xunit.extensibility.execution": "2.6.6"
         }
       },
-      "xunit.extensibility.core/2.5.3": {
+      "xunit.extensibility.core/2.6.6": {
         "dependencies": {
           "xunit.abstractions": "2.0.3"
         },
         "runtime": {
           "lib/netstandard1.1/xunit.core.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.6.6.0",
+            "fileVersion": "2.6.6.0"
           }
         }
       },
-      "xunit.extensibility.execution/2.5.3": {
+      "xunit.extensibility.execution/2.6.6": {
         "dependencies": {
-          "xunit.extensibility.core": "2.5.3"
+          "xunit.extensibility.core": "2.6.6"
         },
         "runtime": {
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.6.6.0",
+            "fileVersion": "2.6.6.0"
+          }
+        }
+      },
+      "xunit.runner.utility/2.6.6": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll": {
+            "assemblyVersion": "2.6.6.0",
+            "fileVersion": "2.6.6.0"
           }
         }
       }
@@ -358,6 +422,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Allure.Net.Commons/2.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n3IOOzS91SYIPtjkhagiOURqP0o0AH2Y3tsvNGOw37dpZlzDcl/I55GHAvQkkyFvahrdoNdAVcT7buB/ai1jhg==",
+      "path": "allure.net.commons/2.14.1",
+      "hashPath": "allure.net.commons.2.14.1.nupkg.sha512"
+    },
+    "Allure.Xunit/2.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rDj2VUJyKrsZwIOfFASgQsaBR9R90HBEIf3oQlM6jOAEUbc8irwEVr/jXLRgnh7JQVLaNBzILx51cp/FPH/AfA==",
+      "path": "allure.xunit/2.14.1",
+      "hashPath": "allure.xunit.2.14.1.nupkg.sha512"
+    },
+    "AspectInjector/2.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BScDeaLazJVFaa2Tt9hoWLhllnxXP3Sew+l/vktdZEcgoPOsqhlDqe6GXJvy7xVkdICAbKFsrcDJ0cfrDR6Mg==",
+      "path": "aspectinjector/2.8.1",
+      "hashPath": "aspectinjector.2.8.1.nupkg.sha512"
+    },
+    "Lib.Harmony/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iLTZi/kKKB18jYEIwReZSx2xXyVUh4J1swReMgvYBBBn4tzA1Nd0PJlVyntY5BDdSiXSxzmvjc/3OYfFs0YwFg==",
+      "path": "lib.harmony/2.4.1",
+      "hashPath": "lib.harmony.2.4.1.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.8.0": {
       "type": "package",
@@ -386,6 +478,13 @@
       "sha512": "sha512-9ivcl/7SGRmOT0YYrHQGohWiT5YCpkmy/UEzldfVisLm6QxbLaK3FAJqZXI34rnRLmqqDCeMQxKINwmKwAPiDw==",
       "path": "microsoft.testplatform.testhost/17.8.0",
       "hashPath": "microsoft.testplatform.testhost.17.8.0.nupkg.sha512"
+    },
+    "MimeTypesMap/1.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M0TuSCwL1a8QV0VKw8ysY4AIs6v/Aor3N7GXQeqgNlAvqjx9Kj9KxNd09Pg5RzpY1tCOU8mkrfYBi1Lxwj8quQ==",
+      "path": "mimetypesmap/1.0.9",
+      "hashPath": "mimetypesmap.1.0.9.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.4": {
       "type": "package",
@@ -422,33 +521,40 @@
       "path": "xunit.abstractions/2.0.3",
       "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
     },
-    "xunit.assert/2.5.3": {
+    "xunit.assert/2.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MK3HiBckO3vdxEdUxXZyyRPsBNPsC/nz6y1gj/UZIZkjMnsVQyZPU8yxS/3cjTchYcqskt/nqUOS5wmD8JezdQ==",
-      "path": "xunit.assert/2.5.3",
-      "hashPath": "xunit.assert.2.5.3.nupkg.sha512"
+      "sha512": "sha512-74Cm9lAZOk5TKCz2MvCBCByKsS23yryOKDIMxH3XRDHXmfGM02jKZWzRA7g4mGB41GnBnv/pcWP3vUYkrCtEcg==",
+      "path": "xunit.assert/2.6.6",
+      "hashPath": "xunit.assert.2.6.6.nupkg.sha512"
     },
-    "xunit.core/2.5.3": {
+    "xunit.core/2.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FE8yEEUkoMLd6kOHDXm/QYfX/dYzwc0c+Q4MQon6VGRwFuy6UVGwK/CFA5LEea+ZBEmcco7AEl2q78VjsA0j/w==",
-      "path": "xunit.core/2.5.3",
-      "hashPath": "xunit.core.2.5.3.nupkg.sha512"
+      "sha512": "sha512-tqi7RfaNBqM7t8zx6QHryuBPzmotsZXKGaWnopQG2Ez5UV7JoWuyoNdT6gLpDIcKdGYey6YTXJdSr9IXDMKwjg==",
+      "path": "xunit.core/2.6.6",
+      "hashPath": "xunit.core.2.6.6.nupkg.sha512"
     },
-    "xunit.extensibility.core/2.5.3": {
+    "xunit.extensibility.core/2.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IjAQlPeZWXP89pl1EuOG9991GH1qgAL0rQfkmX2UV+PDenbYb7oBnQopL9ujE6YaXxgaQazp7lFjsDyyxD6Mtw==",
-      "path": "xunit.extensibility.core/2.5.3",
-      "hashPath": "xunit.extensibility.core.2.5.3.nupkg.sha512"
+      "sha512": "sha512-ty6VKByzbx4Toj4/VGJLEnlmOawqZiMv0in/tLju+ftA+lbWuAWDERM+E52Jfhj4ZYHrAYVa14KHK5T+dq0XxA==",
+      "path": "xunit.extensibility.core/2.6.6",
+      "hashPath": "xunit.extensibility.core.2.6.6.nupkg.sha512"
     },
-    "xunit.extensibility.execution/2.5.3": {
+    "xunit.extensibility.execution/2.6.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-w9eGCHl+gJj1GzZSf0VTzYPp/gv4fiUDkr+yR7/Wv9/ucO2CHltGg2TnyySLFjzekkjuxVJZUE+tZyDNzryJFw==",
-      "path": "xunit.extensibility.execution/2.5.3",
-      "hashPath": "xunit.extensibility.execution.2.5.3.nupkg.sha512"
+      "sha512": "sha512-UDjIVGj2TepVKN3n32/qXIdb3U6STwTb9L6YEwoQO2A8OxiJS5QAVv2l1aT6tDwwv/9WBmm8Khh/LyHALipcng==",
+      "path": "xunit.extensibility.execution/2.6.6",
+      "hashPath": "xunit.extensibility.execution.2.6.6.nupkg.sha512"
+    },
+    "xunit.runner.utility/2.6.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I7OUAf1X8yEqFdw5tBIvlC/4yThLV1u6iItgrzEhrJoabZ+sQLeYJfDOeHEaN+kpU+yPIIYdYME+PM2+fMcQbA==",
+      "path": "xunit.runner.utility/2.6.6",
+      "hashPath": "xunit.runner.utility.2.6.6.nupkg.sha512"
     }
   }
 }

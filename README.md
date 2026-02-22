@@ -1,112 +1,208 @@
-REST API Test Automation Framework (C# + xUnit + RestSharp)
+# REST API Test Automation Framework (C# + xUnit)
 
-Overview
+## Overview
 
-This project is an API Test Automation Framework built using C#, .NET 8, xUnit, and RestSharp.
-It automates testing of the public REST API:
+This project contains automated API tests for the public REST API:
 
 https://api.restful-api.dev/
 
-The framework validates core CRUD operations and verifies API responses using assertions.
+The tests are implemented using:
 
-Technologies Used
+* C#
+* xUnit testing framework
+* RestSharp for HTTP requests
+* Newtonsoft.Json for JSON parsing
+* .NET 8
 
-C# (.NET 8)
-xUnit Test Framework
-RestSharp (HTTP client)
-Newtonsoft.Json (JSON parsing)
-.NET CLI
+The framework validates the complete lifecycle of an object:
 
-Project Structure
-TestCheck/
+1. Create object (POST)
+2. Get object by ID (GET)
+3. Update object (PUT)
+4. Get all objects (GET)
+5. Delete object (DELETE)
+
+---
+
+## Project Structure
+
+```
+TestCheck
 │
-├── ApiFixture.cs         # Initializes RestClient and shared setup
-├── RestfulApiTests.cs    # Contains API test cases
-├── TestCheck.csproj      # Project configuration
-└── README.md             # Documentation
+├── Fixtures
+│   └── ApiFixture.cs
+│
+├── Helpers
+│   ├── ObjectHelper.cs
+│   ├── RandomDataHelper.cs
+│   ├── PriorityAttribute.cs
+│   └── PriorityOrderer.cs
+│
+├── Tests
+│   └── RestfulApiTests.cs
+│
+└── TestCheck.csproj
+```
 
+### Fixtures
 
-Test Cases Implemented
+Contains shared setup logic such as RestClient initialization.
 
-The following test scenarios are implemented:
+### Helpers
 
-Get all objects (GET /objects)
-Create a new object (POST /objects)
-Get object by ID (GET /objects/{id})
-Update object (PUT /objects/{id})
-Delete object (DELETE /objects/{id})
+Contains reusable helper classes:
 
-Note: Some tests may be temporarily skipped due to public API rate limits.
+* ObjectHelper → API operations (Create, Get, Update, Delete)
+* RandomDataHelper → generates dynamic test data
+* PriorityOrderer → controls test execution order
 
-Prerequisites
+### Tests
 
-Ensure the following are installed:
+Contains test cases covering all required API scenarios.
 
-.NET SDK 8.0 or later
-Download: https://dotnet.microsoft.com/download
+---
 
-Verify installation:
+## Test Scenarios Covered
 
-dotnet --version
+### 1. Create Object
 
-How to Run the Tests
+* Sends POST request
+* Validates status code
+* Validates response contains ID
+* Validates response structure
 
-Option 1: Run using Command Line (Recommended)
+### 2. Get Object by ID
 
-Step 1: Clone the repository
-git clone <your-repository-url>
-cd TestCheck
-Step 2: Restore dependencies
-dotnet restore
-Step 3: Run all tests
-dotnet test --logger "console;verbosity=detailed"
-Step 4: Run a specific test (optional)
+* Sends GET request
+* Validates correct object returned
+* Validates response data integrity
 
-Example:
+### 3. Update Object
 
-dotnet test --filter GetAllObjects_ShouldReturn200
+* Sends PUT request
+* Validates update success
+* Validates updated fields
 
-Option 2: Run using Visual Studio Code (Optional)
-Step 1: Open project in VS Code
-code .
-OR manually open the folder in VS Code.
-Step 2: Restore dependencies
-Open Terminal in VS Code and run:
-dotnet restore
-Step 3: Run tests
-dotnet test
+### 4. Get All Objects
 
-Option 3: Run using Visual Studio (Optional)
+* Sends GET request
+* Validates response is not empty
+* Validates response structure
 
-Open Visual Studio
-Click File → Open → Project/Solution
-Select:
-TestCheck.csproj
-Open Test Explorer
-Click Run All Tests
+### 5. Delete Object
 
-Test Execution Output
+* Sends DELETE request
+* Validates successful deletion
+* Verifies object no longer exists
 
-Example output:
+---
 
-Passed GetAllObjects
-Passed GetObjectById
-
-Framework Design
+## Test Framework Design
 
 This framework follows best practices:
 
-Fixture pattern using IClassFixture
-Separation of setup and test logic
-Reusable RestClient instance
-Clear assertions and logging
-Parameterized test support
+* Separation of concerns
+* Reusable helper classes
+* Shared test fixture
+* Random test data generation
+* Strong assertions
+* Clean and maintainable structure
 
-Notes
+---
 
-The public API has a daily rate limit. If the limit is exceeded, some POST/PUT/DELETE tests may fail or be skipped.
+## Prerequisites
 
-Author
+Install:
+
+* .NET 8 SDK
+  Download: https://dotnet.microsoft.com/download
+
+Verify installation:
+
+```
+dotnet --version
+```
+
+---
+
+## How to Run the Tests
+
+### Step 1: Clone repository
+
+```
+git clone https://github.com/<your-username>/TestCheck.git
+cd TestCheck
+```
+
+---
+
+### Step 2: Restore dependencies
+
+```
+dotnet restore
+```
+
+---
+
+### Step 3: Run all tests
+
+```
+dotnet test --logger "console;verbosity=detailed"
+```
+
+---
+
+### Step 4: Run specific test
+
+Example:
+
+```
+dotnet test --filter CreateObject
+```
+
+---
+
+## Sample Test Output
+
+```
+Passed: Create object and validate response
+Passed: Get created object by ID
+Passed: Update object and validate response
+Passed: Get all objects and validate response structure
+Passed: Delete object and validate response
+```
+
+---
+
+## Tools and Libraries Used
+
+| Tool            | Purpose         |
+| --------------- | --------------- |
+| xUnit           | Test framework  |
+| RestSharp       | HTTP client     |
+| Newtonsoft.Json | JSON parsing    |
+| .NET 8          | Runtime         |
+| GitHub          | Version control |
+
+---
+
+## Author
 
 Saman Chandana
-API Test Automation Framework using C# and xUnit
+
+Test Automation Engineer
+
+Skills:
+
+* API Test Automation
+* Selenium
+* Playwright
+* RestSharp
+* xUnit
+* C#
+
+---
+
+## Notes
+
+This project was created as part of a technical assessment to demonstrate API automation skills, framework design, and best practices.
