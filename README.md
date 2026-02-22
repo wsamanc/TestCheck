@@ -190,16 +190,18 @@ Passed: Delete object and validate response
 
 Saman Chandana
 
-Test Automation Engineer
+Test Automation Consultant
 
 Skills:
 
-* API Test Automation
-* Selenium
-* Playwright
-* RestSharp
-* xUnit
-* C#
+• Programming Languages: Java, C#
+• API Automation: RestAssured, RestSharp, Postman
+• UI Automation: Selenium WebDriver, Playwright
+• Test Frameworks: TestNG, xUnit
+• Performance Testing: Apache JMeter
+• Reporting: Allure Reports, ExtentReports
+• Version Control: Git, GitHub
+• Automation Framework Design: Page Object Model (POM), Hybrid Framework
 
 ---
 
