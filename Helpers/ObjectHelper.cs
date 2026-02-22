@@ -15,8 +15,7 @@ namespace TestCheck.Helpers
             this.client = client;
         }
 
-        public (string id, string name, int year, double price, string cpu, string disk)
-        CreateObjectWithData()
+        public (string id, string name, int year, double price, string cpu, string disk) CreateObjectWithData()
         {
             var name = RandomDataHelper.GenerateName();
             var year = RandomDataHelper.GenerateYear();
@@ -26,7 +25,7 @@ namespace TestCheck.Helpers
 
             var request = new RestRequest("objects", Method.Post);
 
-            var body = new
+            var requestBody = new
             {
                 name = name,
                 data = new Dictionary<string, object>
@@ -38,20 +37,40 @@ namespace TestCheck.Helpers
         }
             };
 
-            request.AddJsonBody(body);
+            request.AddJsonBody(requestBody);
 
             var response = client.Execute(request);
 
+            // LOGGING
+            Console.WriteLine("=== CREATE RESPONSE ===");
+            Console.WriteLine("Status Code: " + response.StatusCode);
+            Console.WriteLine("Response Body: " + response.Content);
+            Console.WriteLine("=======================");
+
+            // Proper validation
+            if (response == null)
+            {
+                throw new Exception("Create failed: Response is null");
+            }
+
             if (!response.IsSuccessful)
-                throw new Exception("Create failed");
+            {
+                throw new Exception(
+                    $"Create failed.\nStatus: {response.StatusCode}\nBody: {response.Content}"
+                );
+            }
 
             var json = JObject.Parse(response.Content);
 
-            var id = json["id"].ToString();
+            var id = json["id"]?.ToString();
+
+            if (string.IsNullOrEmpty(id))
+            {
+                throw new Exception("Create failed: ID not found in response");
+            }
 
             return (id, name, year, price, cpu, disk);
         }
-
         public RestResponse GetAllObjects()
         {
             var request = new RestRequest("objects", Method.Get);

@@ -22,11 +22,10 @@ The framework validates the complete lifecycle of an object:
 4. Get all objects (GET)
 5. Delete object (DELETE)
 
----
 
 ## Project Structure
 
-```
+
 TestCheck
 │
 ├── Fixtures
@@ -42,7 +41,7 @@ TestCheck
 │   └── RestfulApiTests.cs
 │
 └── TestCheck.csproj
-```
+
 
 ### Fixtures
 
@@ -59,8 +58,6 @@ Contains reusable helper classes:
 ### Tests
 
 Contains test cases covering all required API scenarios.
-
----
 
 ## Test Scenarios Covered
 
@@ -95,7 +92,6 @@ Contains test cases covering all required API scenarios.
 * Validates successful deletion
 * Verifies object no longer exists
 
----
 
 ## Test Framework Design
 
@@ -108,7 +104,6 @@ This framework follows best practices:
 * Strong assertions
 * Clean and maintainable structure
 
----
 
 ## Prerequisites
 
@@ -118,61 +113,32 @@ Install:
   Download: https://dotnet.microsoft.com/download
 
 Verify installation:
-
-```
 dotnet --version
-```
 
----
 
 ## How to Run the Tests
 
 ### Step 1: Clone repository
-
-```
-git clone https://github.com/<your-username>/TestCheck.git
+git clone https://github.com/wsamanc/TestCheck.git          
 cd TestCheck
-```
-
----
 
 ### Step 2: Restore dependencies
-
-```
 dotnet restore
-```
-
----
 
 ### Step 3: Run all tests
-
-```
 dotnet test --logger "console;verbosity=detailed"
-```
-
----
 
 ### Step 4: Run specific test
-
 Example:
-
-```
 dotnet test --filter CreateObject
-```
-
----
 
 ## Sample Test Output
 
-```
 Passed: Create object and validate response
 Passed: Get created object by ID
 Passed: Update object and validate response
 Passed: Get all objects and validate response structure
 Passed: Delete object and validate response
-```
-
----
 
 ## Tools and Libraries Used
 
@@ -184,12 +150,10 @@ Passed: Delete object and validate response
 | .NET 8          | Runtime         |
 | GitHub          | Version control |
 
----
 
 ## Author
 
 Saman Chandana
-
 Test Automation Consultant
 
 Skills:
@@ -203,7 +167,6 @@ Skills:
 • Version Control: Git, GitHub
 • Automation Framework Design: Page Object Model (POM), Hybrid Framework
 
----
 
 ## Notes
 
